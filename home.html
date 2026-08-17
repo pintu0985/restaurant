@@ -23,10 +23,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;0,900;1,700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="/src/styles/main.css">
-  
   <style>
-    /* Inline Fallback & Standalone Optimization for home.html */
+    /* =============================================
+       CORE DESIGN SYSTEM & VARIABLES
+       ============================================= */
     :root {
       --primary: #852e01;
       --primary-dark: #672200;
@@ -84,7 +84,9 @@
       padding: 0 1.5rem;
     }
 
-    /* Navbar Styles */
+    /* =============================================
+       NAVBAR
+       ============================================= */
     .navbar {
       position: sticky;
       top: 0;
@@ -163,23 +165,6 @@
       transform: translateY(-2px);
     }
 
-    .cart-badge {
-      position: absolute;
-      top: -4px;
-      right: -4px;
-      background: var(--primary);
-      color: var(--white);
-      font-size: 0.7rem;
-      font-weight: 800;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 2px solid var(--white);
-    }
-
     .btn {
       display: inline-flex;
       align-items: center;
@@ -228,7 +213,9 @@
       display: none;
     }
 
-    /* Hero Section */
+    /* =============================================
+       HERO SECTION
+       ============================================= */
     .hero-section {
       position: relative;
       overflow: hidden;
@@ -280,7 +267,251 @@
       50% { transform: scale(1.03); box-shadow: 0 14px 40px rgba(217, 119, 6, 0.65); }
     }
 
-    /* Section Global */
+    /* =============================================
+       PREMIUM EXPLORE OUR MENU SECTION (DARK SHOWCASE)
+       ============================================= */
+    .explore-menu-section {
+      padding: 5.5rem 0 4.5rem;
+      position: relative;
+      background: linear-gradient(165deg, #1a0500 0%, #2b0d00 45%, #0f0200 100%) !important;
+      overflow: hidden;
+    }
+
+    .explore-menu-section::before,
+    .explore-menu-section::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .explore-menu-section::before {
+      width: 480px;
+      height: 480px;
+      top: -80px;
+      left: -120px;
+      background: radial-gradient(circle, rgba(217,119,6,0.22) 0%, transparent 70%);
+      filter: blur(48px);
+    }
+    .explore-menu-section::after {
+      width: 360px;
+      height: 360px;
+      bottom: -60px;
+      right: -80px;
+      background: radial-gradient(circle, rgba(180,40,0,0.2) 0%, transparent 70%);
+      filter: blur(40px);
+    }
+
+    .explore-menu-inner {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .explore-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .explore-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(217,119,6,0.15);
+      border: 1.5px solid rgba(217,119,6,0.55);
+      color: #fbbf24;
+      padding: 0.45rem 1.4rem;
+      border-radius: 50px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .explore-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      font-weight: 900;
+      color: #fef3c7;
+      margin: 0 0 0.75rem;
+      letter-spacing: -0.5px;
+      line-height: 1.15;
+    }
+
+    .explore-subtitle {
+      font-size: 1.05rem;
+      color: rgba(254,243,199,0.65);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* Horizontal Scroll Strip */
+    .explore-scroll-track {
+      display: flex;
+      gap: 1.5rem;
+      overflow-x: auto;
+      padding: 0.75rem 0.25rem 1.75rem;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(217,119,6,0.55) rgba(255,255,255,0.06);
+    }
+
+    .explore-scroll-track::-webkit-scrollbar {
+      height: 7px;
+    }
+
+    .explore-scroll-track::-webkit-scrollbar-track {
+      background: rgba(255,255,255,0.06);
+      border-radius: 10px;
+    }
+
+    .explore-scroll-track::-webkit-scrollbar-thumb {
+      background: linear-gradient(90deg, #d97706, #b45309);
+      border-radius: 10px;
+    }
+
+    /* Individual Explore Card */
+    .explore-card {
+      flex: 0 0 280px;
+      scroll-snap-align: start;
+      border-radius: 20px;
+      overflow: hidden;
+      cursor: pointer;
+      background: rgba(255,255,255,0.04);
+      border: 1.5px solid rgba(255,255,255,0.1);
+      transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s ease, border-color 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      position: relative;
+    }
+
+    .explore-card:hover {
+      transform: translateY(-10px) scale(1.025);
+      box-shadow: 0 30px 70px rgba(0,0,0,0.7), 0 0 0 1.5px rgba(217,119,6,0.6);
+      border-color: rgba(217,119,6,0.5);
+    }
+
+    .explore-card-img-wrap {
+      position: relative;
+      height: 220px;
+      overflow: hidden;
+      width: 100%;
+      background: #110300;
+    }
+
+    .explore-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover !important;
+      object-position: center;
+      transition: transform 0.55s cubic-bezier(0.22,1,0.36,1);
+      display: block;
+    }
+
+    .explore-card:hover .explore-card-img {
+      transform: scale(1.1);
+    }
+
+    .explore-card-shine {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        160deg,
+        rgba(255,255,255,0.15) 0%,
+        transparent 40%,
+        rgba(0,0,0,0.45) 100%
+      );
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .explore-card:hover .explore-card-shine {
+      opacity: 0.7;
+    }
+
+    .explore-card-bottom {
+      display: flex;
+      flex-direction: column;
+      padding: 1.15rem 1.25rem;
+      background: rgba(30,8,0,0.96);
+      border-top: 1px solid rgba(217,119,6,0.25);
+    }
+
+    .explore-card-name {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #fef3c7;
+      font-family: var(--font-heading);
+      line-height: 1.3;
+      margin-bottom: 0.3rem;
+    }
+
+    .explore-card-sub {
+      font-size: 0.82rem;
+      color: rgba(254,243,199,0.6);
+      line-height: 1.4;
+    }
+
+    /* Explore Bottom CTA */
+    .explore-cta-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      margin-top: 2.75rem;
+      padding: 1.6rem 2.2rem;
+      background: rgba(255,255,255,0.04);
+      border: 1.5px solid rgba(217,119,6,0.3);
+      border-radius: 20px;
+      backdrop-filter: blur(8px);
+    }
+
+    .explore-cta-headline {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #fef3c7;
+      font-family: var(--font-heading);
+      display: block;
+    }
+
+    .explore-cta-sub {
+      font-size: 0.88rem;
+      color: rgba(254,243,199,0.6);
+      display: block;
+      margin-top: 0.25rem;
+    }
+
+    .explore-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: linear-gradient(135deg, #d97706, #b45309);
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.95rem;
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      letter-spacing: 0.3px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      box-shadow: 0 8px 25px rgba(180,83,9,0.5);
+      white-space: nowrap;
+    }
+
+    .explore-cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 35px rgba(180,83,9,0.7);
+    }
+
+    /* =============================================
+       SECTIONS & FOOD GRID
+       ============================================= */
     .section {
       padding: 5rem 0;
     }
@@ -318,7 +549,6 @@
       font-size: 1.05rem;
     }
 
-    /* Food Grid */
     .food-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -449,7 +679,9 @@
       padding-top: 1rem;
     }
 
-    /* Features Grid */
+    /* =============================================
+       FEATURES GRID
+       ============================================= */
     .features-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -491,7 +723,9 @@
       line-height: 1.5;
     }
 
-    /* Two Column Story Grid */
+    /* =============================================
+       TWO COL STORY GRID
+       ============================================= */
     .two-col-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -535,7 +769,9 @@
       margin-top: 4px;
     }
 
-    /* Testimonials Grid */
+    /* =============================================
+       TESTIMONIALS
+       ============================================= */
     .testimonials-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -593,7 +829,9 @@
       color: var(--text-muted);
     }
 
-    /* CTA Banner */
+    /* =============================================
+       CTA BANNER & FOOTER
+       ============================================= */
     .cta-banner {
       background: linear-gradient(135deg, var(--primary) 0%, var(--dark-brown) 100%);
       border-radius: var(--radius-lg);
@@ -621,7 +859,6 @@
       font-size: 1.05rem;
     }
 
-    /* Footer */
     .footer {
       background: #170701;
       color: var(--cream);
@@ -663,6 +900,25 @@
       padding-left: 5px;
     }
 
+    .social-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--cream);
+      transition: var(--transition);
+    }
+
+    .social-icon:hover {
+      background: var(--primary);
+      transform: translateY(-3px);
+      color: var(--white);
+    }
+
     .footer-bottom {
       border-top: 1px solid rgba(255, 255, 255, 0.1);
       padding-top: 2rem;
@@ -675,7 +931,6 @@
       color: rgba(255, 247, 239, 0.6);
     }
 
-    /* Mobile Bottom Bar */
     .mobile-bottom-bar {
       display: none;
       position: fixed;
@@ -691,7 +946,9 @@
       justify-content: space-between;
     }
 
-    /* Responsive */
+    /* =============================================
+       RESPONSIVE BREAKPOINTS
+       ============================================= */
     @media (max-width: 992px) {
       .hero-grid { grid-template-columns: 1fr; text-align: center; }
       .hero-content { margin: 0 auto; text-align: center !important; }
@@ -717,6 +974,9 @@
       }
       .nav-menu.open { display: flex; }
       .hero-title { font-size: 2.2rem; }
+      .explore-title { font-size: 2.2rem; }
+      .explore-card { flex: 0 0 240px; }
+      .explore-card-img-wrap { height: 180px; }
       .footer-grid { grid-template-columns: 1fr; }
       .mobile-bottom-bar { display: flex; }
     }
@@ -829,8 +1089,8 @@
       </div>
     </section>
 
-    <!-- PREMIUM EXPLORE OUR MENU SHOWCASE SECTION -->
-    <section class="section explore-menu-section" style="background: linear-gradient(165deg, #1a0500 0%, #2b0d00 40%, #0f0200 100%); overflow: hidden;">
+    <!-- PREMIUM EXPLORE OUR MENU SHOWCASE SECTION (DARK REDESIGN) -->
+    <section class="section explore-menu-section">
       <div class="explore-menu-inner">
         <!-- SECTION HEADER -->
         <div class="explore-header">
@@ -840,110 +1100,102 @@
         </div>
 
         <!-- HORIZONTAL SCROLL CARD STRIP -->
-        <div class="explore-scroll-track">
-          <div class="explore-card" onclick="window.location.href='index.html#menu?cat=chef-specials'">
+        <div class="explore-scroll-track" id="explore-track">
+          <!-- Card 1 -->
+          <a href="index.html#menu?cat=chef-specials" class="explore-card">
             <div class="explore-card-img-wrap">
               <img src="https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?auto=format&fit=crop&w=800&q=80" alt="Chef Specials" class="explore-card-img">
               <div class="explore-card-shine"></div>
             </div>
             <div class="explore-card-bottom">
-              <div class="explore-card-info">
-                <div class="explore-card-name">Chef Specials</div>
-                <div class="explore-card-sub">Biryani & Royal Thalis</div>
-              </div>
+              <div class="explore-card-name">Chef Specials</div>
+              <div class="explore-card-sub">Biryani & Royal Thalis</div>
             </div>
-          </div>
+          </a>
 
-          <div class="explore-card" onclick="window.location.href='index.html#menu?cat=tandoori-platter'">
+          <!-- Card 2 -->
+          <a href="index.html#menu?cat=tandoori-platter" class="explore-card">
             <div class="explore-card-img-wrap">
               <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=800&q=80" alt="Tandoori Platter" class="explore-card-img">
               <div class="explore-card-shine"></div>
             </div>
             <div class="explore-card-bottom">
-              <div class="explore-card-info">
-                <div class="explore-card-name">Tandoori Platter</div>
-                <div class="explore-card-sub">Charcoal Flame Kababs</div>
-              </div>
+              <div class="explore-card-name">Tandoori Platter</div>
+              <div class="explore-card-sub">Charcoal Flame Kababs</div>
             </div>
-          </div>
+          </a>
 
-          <div class="explore-card" onclick="window.location.href='index.html#menu?cat=paneer-special'">
+          <!-- Card 3 -->
+          <a href="index.html#menu?cat=paneer-special" class="explore-card">
             <div class="explore-card-img-wrap">
               <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&q=80" alt="Paneer Special" class="explore-card-img">
               <div class="explore-card-shine"></div>
             </div>
             <div class="explore-card-bottom">
-              <div class="explore-card-info">
-                <div class="explore-card-name">Paneer Special</div>
-                <div class="explore-card-sub">Desi Ghee Rich Gravies</div>
-              </div>
+              <div class="explore-card-name">Paneer Special</div>
+              <div class="explore-card-sub">Desi Ghee Rich Gravies</div>
             </div>
-          </div>
+          </a>
 
-          <div class="explore-card" onclick="window.location.href='index.html#menu?cat=desi-special-kulche-naan'">
+          <!-- Card 4 -->
+          <a href="index.html#menu?cat=desi-special-kulche-naan" class="explore-card">
             <div class="explore-card-img-wrap">
               <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80" alt="Amritsari Kulcha" class="explore-card-img">
               <div class="explore-card-shine"></div>
             </div>
             <div class="explore-card-bottom">
-              <div class="explore-card-info">
-                <div class="explore-card-name">Amritsari Kulcha & Naan</div>
-                <div class="explore-card-sub">Crispy Clay Tandoor Breads</div>
-              </div>
+              <div class="explore-card-name">Amritsari Kulcha & Naan</div>
+              <div class="explore-card-sub">Crispy Clay Tandoor Breads</div>
             </div>
-          </div>
+          </a>
 
-          <div class="explore-card" onclick="window.location.href='index.html#menu?cat=desi-special-thali'">
+          <!-- Card 5 -->
+          <a href="index.html#menu?cat=desi-special-thali" class="explore-card">
             <div class="explore-card-img-wrap">
               <img src="https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?auto=format&fit=crop&w=800&q=80" alt="Punjabi Thalis" class="explore-card-img">
               <div class="explore-card-shine"></div>
             </div>
             <div class="explore-card-bottom">
-              <div class="explore-card-info">
-                <div class="explore-card-name">Punjabi Thalis</div>
-                <div class="explore-card-sub">Grand Royal Feast</div>
-              </div>
+              <div class="explore-card-name">Punjabi Thalis</div>
+              <div class="explore-card-sub">Grand Royal Feast</div>
             </div>
-          </div>
+          </a>
 
-          <div class="explore-card" onclick="window.location.href='index.html#menu?cat=stuffed-soya-chaap'">
+          <!-- Card 6 -->
+          <a href="index.html#menu?cat=stuffed-soya-chaap" class="explore-card">
             <div class="explore-card-img-wrap">
               <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80" alt="Stuffed Soya Chaap" class="explore-card-img">
               <div class="explore-card-shine"></div>
             </div>
             <div class="explore-card-bottom">
-              <div class="explore-card-info">
-                <div class="explore-card-name">Stuffed Soya Chaap</div>
-                <div class="explore-card-sub">Malai & Achari Tikkas</div>
-              </div>
+              <div class="explore-card-name">Stuffed Soya Chaap</div>
+              <div class="explore-card-sub">Malai & Achari Tikkas</div>
             </div>
-          </div>
+          </a>
 
-          <div class="explore-card" onclick="window.location.href='index.html#menu?cat=cold-beverages'">
+          <!-- Card 7 -->
+          <a href="index.html#menu?cat=cold-beverages" class="explore-card">
             <div class="explore-card-img-wrap">
               <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80" alt="Patiala Lassi" class="explore-card-img">
               <div class="explore-card-shine"></div>
             </div>
             <div class="explore-card-bottom">
-              <div class="explore-card-info">
-                <div class="explore-card-name">Patiala Lassi & Drinks</div>
-                <div class="explore-card-sub">Makhaniya Lassi & Chhach</div>
-              </div>
+              <div class="explore-card-name">Patiala Lassi & Drinks</div>
+              <div class="explore-card-sub">Makhaniya Lassi & Chhach</div>
             </div>
-          </div>
+          </a>
 
-          <div class="explore-card" onclick="window.location.href='index.html#menu?cat=desserts'">
+          <!-- Card 8 -->
+          <a href="index.html#menu?cat=desserts" class="explore-card">
             <div class="explore-card-img-wrap">
               <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80" alt="Desserts" class="explore-card-img">
               <div class="explore-card-shine"></div>
             </div>
             <div class="explore-card-bottom">
-              <div class="explore-card-info">
-                <div class="explore-card-name">Desserts & Sweets</div>
-                <div class="explore-card-sub">Gulkandi Kheer & Gulabjamun</div>
-              </div>
+              <div class="explore-card-name">Desserts & Sweets</div>
+              <div class="explore-card-sub">Gulkandi Kheer & Gulabjamun</div>
             </div>
-          </div>
+          </a>
         </div>
 
         <!-- BOTTOM CTA ROW -->
