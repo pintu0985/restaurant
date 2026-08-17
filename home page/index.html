@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>Desi Tadka | Pure Veg Restaurant & Authentic Indian Taste</title>
   
   <!-- SEO Meta Tags -->
@@ -13,12 +13,12 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/logo.png">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts Preconnect & Stylesheets -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;0,900;1,700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
 
-  <!-- External Stylesheet -->
+  <!-- External Responsive Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,7 +26,7 @@
   <!-- NAVBAR -->
   <header class="navbar" id="main-navbar">
     <div class="container navbar-container">
-      <a href="index.html" class="brand-logo">
+      <a href="index.html" class="brand-logo" aria-label="Desi Tadka Home">
         <div class="brand-logo-img">
           <img src="images/logo.png" alt="Desi Tadka Logo" onerror="this.src='logo.png'">
         </div>
@@ -50,7 +50,7 @@
         <a href="../index.html#order" class="btn btn-primary btn-sm" style="font-weight: 800;">
           Order Now
         </a>
-        <button class="hamburger-btn" id="hamburger-toggle" aria-label="Toggle Navigation">
+        <button class="hamburger-btn" id="hamburger-toggle" aria-label="Toggle Navigation Menu">
           ☰
         </button>
       </div>
@@ -80,10 +80,10 @@
             </p>
 
             <div class="hero-btns">
-              <a href="../index.html#order" class="btn btn-primary animate-pulse-glow" style="padding: 1.1rem 2.5rem; font-size: 1.1rem; font-weight: 800; background: var(--gold-accent); color: var(--deep-espresso); border: none;">
+              <a href="../index.html#order" class="btn btn-primary animate-pulse-glow" style="padding: 1rem 2.2rem; font-weight: 800; background: var(--gold-accent); color: var(--deep-espresso); border: none;">
                 🔥 Order Food Now
               </a>
-              <a href="../index.html#menu" class="btn btn-secondary" style="padding: 1.1rem 2.25rem; font-size: 1rem; font-weight: 700; background: rgba(0,0,0,0.3);">
+              <a href="../index.html#menu" class="btn btn-secondary" style="padding: 1rem 2rem; font-weight: 700;">
                 📜 Explore Menu (120+ Items)
               </a>
             </div>
@@ -106,21 +106,12 @@
           </div>
 
           <!-- RIGHT HERO — CLEAN 360° ROTATING PANEER DISH -->
-          <div style="position: relative; display: flex; justify-content: center; align-items: center;">
-            <div class="animate-rotate-360" style="
-              width: 360px;
-              height: 360px;
-              border-radius: 50%;
-              overflow: hidden;
-              z-index: 2;
-              position: relative;
-              flex-shrink: 0;
-            ">
+          <div class="hero-dish-wrap">
+            <div class="hero-dish-circle animate-rotate-360">
               <img
                 src="images/paneer-katori.png"
                 alt="Shahi Paneer Sabji"
                 onerror="this.src='paneer-katori.png'"
-                style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block;"
               >
             </div>
           </div>
@@ -144,7 +135,7 @@
           <!-- Card 1 -->
           <a href="../index.html#menu?cat=chef-specials" class="explore-card">
             <div class="explore-card-img-wrap">
-              <img src="https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?auto=format&fit=crop&w=800&q=80" alt="Chef Specials" class="explore-card-img">
+              <img src="https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?auto=format&fit=crop&w=800&q=80" alt="Chef Specials" class="explore-card-img" loading="lazy">
               <div class="explore-card-shine"></div>
             </div>
             <div class="explore-card-bottom">
@@ -156,7 +147,7 @@
           <!-- Card 2 -->
           <a href="../index.html#menu?cat=tandoori-platter" class="explore-card">
             <div class="explore-card-img-wrap">
-              <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=800&q=80" alt="Tandoori Platter" class="explore-card-img">
+              <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=800&q=80" alt="Tandoori Platter" class="explore-card-img" loading="lazy">
               <div class="explore-card-shine"></div>
             </div>
             <div class="explore-card-bottom">
@@ -168,7 +159,7 @@
           <!-- Card 3 -->
           <a href="../index.html#menu?cat=paneer-special" class="explore-card">
             <div class="explore-card-img-wrap">
-              <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&q=80" alt="Paneer Special" class="explore-card-img">
+              <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&q=80" alt="Paneer Special" class="explore-card-img" loading="lazy">
               <div class="explore-card-shine"></div>
             </div>
             <div class="explore-card-bottom">
@@ -180,7 +171,7 @@
           <!-- Card 4 -->
           <a href="../index.html#menu?cat=desi-special-kulche-naan" class="explore-card">
             <div class="explore-card-img-wrap">
-              <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80" alt="Amritsari Kulcha" class="explore-card-img">
+              <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80" alt="Amritsari Kulcha" class="explore-card-img" loading="lazy">
               <div class="explore-card-shine"></div>
             </div>
             <div class="explore-card-bottom">
@@ -192,7 +183,7 @@
           <!-- Card 5 -->
           <a href="../index.html#menu?cat=desi-special-thali" class="explore-card">
             <div class="explore-card-img-wrap">
-              <img src="https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?auto=format&fit=crop&w=800&q=80" alt="Punjabi Thalis" class="explore-card-img">
+              <img src="https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?auto=format&fit=crop&w=800&q=80" alt="Punjabi Thalis" class="explore-card-img" loading="lazy">
               <div class="explore-card-shine"></div>
             </div>
             <div class="explore-card-bottom">
@@ -204,7 +195,7 @@
           <!-- Card 6 -->
           <a href="../index.html#menu?cat=stuffed-soya-chaap" class="explore-card">
             <div class="explore-card-img-wrap">
-              <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80" alt="Stuffed Soya Chaap" class="explore-card-img">
+              <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80" alt="Stuffed Soya Chaap" class="explore-card-img" loading="lazy">
               <div class="explore-card-shine"></div>
             </div>
             <div class="explore-card-bottom">
@@ -216,7 +207,7 @@
           <!-- Card 7 -->
           <a href="../index.html#menu?cat=cold-beverages" class="explore-card">
             <div class="explore-card-img-wrap">
-              <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80" alt="Patiala Lassi" class="explore-card-img">
+              <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80" alt="Patiala Lassi" class="explore-card-img" loading="lazy">
               <div class="explore-card-shine"></div>
             </div>
             <div class="explore-card-bottom">
@@ -228,7 +219,7 @@
           <!-- Card 8 -->
           <a href="../index.html#menu?cat=desserts" class="explore-card">
             <div class="explore-card-img-wrap">
-              <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80" alt="Desserts" class="explore-card-img">
+              <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80" alt="Desserts" class="explore-card-img" loading="lazy">
               <div class="explore-card-shine"></div>
             </div>
             <div class="explore-card-bottom">
@@ -264,7 +255,7 @@
           <!-- Dish 1 -->
           <div class="food-card">
             <div class="food-card-img-wrap">
-              <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80" alt="Dum Biryani" class="food-card-img">
+              <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80" alt="Dum Biryani" class="food-card-img" loading="lazy">
               <div class="food-card-badges">
                 <span class="badge-veg" title="Vegetarian"></span>
                 <span class="tag-pill tag-bestseller">⭐ Bestseller</span>
@@ -284,7 +275,7 @@
           <!-- Dish 2 -->
           <div class="food-card">
             <div class="food-card-img-wrap">
-              <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80" alt="Dal Makhani" class="food-card-img">
+              <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80" alt="Dal Makhani" class="food-card-img" loading="lazy">
               <div class="food-card-badges">
                 <span class="badge-veg" title="Vegetarian"></span>
                 <span class="tag-pill tag-bestseller">⭐ Bestseller</span>
@@ -304,7 +295,7 @@
           <!-- Dish 3 -->
           <div class="food-card">
             <div class="food-card-img-wrap">
-              <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&q=80" alt="Paneer Butter Masala" class="food-card-img">
+              <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=800&q=80" alt="Paneer Butter Masala" class="food-card-img" loading="lazy">
               <div class="food-card-badges">
                 <span class="badge-veg" title="Vegetarian"></span>
                 <span class="tag-pill tag-bestseller">⭐ Bestseller</span>
@@ -324,7 +315,7 @@
           <!-- Dish 4 -->
           <div class="food-card">
             <div class="food-card-img-wrap">
-              <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=800&q=80" alt="Tandoori Paneer Tikka" class="food-card-img">
+              <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=800&q=80" alt="Tandoori Paneer Tikka" class="food-card-img" loading="lazy">
               <div class="food-card-badges">
                 <span class="badge-veg" title="Vegetarian"></span>
                 <span class="tag-pill tag-bestseller">⭐ Bestseller</span>
@@ -344,7 +335,7 @@
           <!-- Dish 5 -->
           <div class="food-card">
             <div class="food-card-img-wrap">
-              <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80" alt="Amritsari Aloo Pyaaz Kulcha" class="food-card-img">
+              <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80" alt="Amritsari Aloo Pyaaz Kulcha" class="food-card-img" loading="lazy">
               <div class="food-card-badges">
                 <span class="badge-veg" title="Vegetarian"></span>
                 <span class="tag-pill tag-bestseller">⭐ Bestseller</span>
@@ -364,7 +355,7 @@
           <!-- Dish 6 -->
           <div class="food-card">
             <div class="food-card-img-wrap">
-              <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80" alt="Patiala Shahi Lassi" class="food-card-img">
+              <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80" alt="Patiala Shahi Lassi" class="food-card-img" loading="lazy">
               <div class="food-card-badges">
                 <span class="badge-veg" title="Vegetarian"></span>
                 <span class="tag-pill tag-bestseller">⭐ Bestseller</span>
@@ -426,12 +417,12 @@
     <!-- OPENING HOURS SECTION -->
     <section class="section section-dark" style="padding: 4.5rem 0; position: relative;">
       <div class="container" style="max-width: 680px;">
-        <div style="background: rgba(255, 247, 239, 0.04); border: 1.5px solid rgba(133, 46, 1, 0.4); border-radius: var(--radius-lg); padding: 3rem 2rem; text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,0.5); backdrop-filter: blur(10px);">
+        <div style="background: rgba(255, 247, 239, 0.04); border: 1.5px solid rgba(133, 46, 1, 0.4); border-radius: var(--radius-lg); padding: clamp(1.5rem, 4vw, 3rem) clamp(1.2rem, 3vw, 2rem); text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,0.5); backdrop-filter: blur(10px);">
           <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🪔</div>
           <div style="font-size: 0.82rem; text-transform: uppercase; letter-spacing: 3px; color: var(--warm-beige); font-weight: 700; margin-bottom: 0.35rem;">
             Hospitality Hours
           </div>
-          <h2 style="font-size: 2.2rem; color: #ffffff; font-family: var(--font-heading); font-weight: 800; margin-bottom: 0.5rem;">
+          <h2 style="font-size: clamp(1.8rem, 4vw, 2.2rem); color: #ffffff; font-family: var(--font-heading); font-weight: 800; margin-bottom: 0.5rem;">
             Desi Tadka Times
           </h2>
           <p style="color: rgba(255, 247, 239, 0.75); font-size: 0.95rem; margin-bottom: 1.75rem;">
@@ -472,7 +463,7 @@
       <div class="container">
         <div class="two-col-grid">
           <div class="img-stack">
-            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Restaurant Interior">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Restaurant Interior" loading="lazy">
             <div class="experience-badge">
               <div class="exp-num">22+</div>
               <div class="exp-lbl">Years of Culinary Heritage</div>
@@ -507,7 +498,7 @@
             <div class="testimonial-stars">★★★★★</div>
             <p class="testimonial-text">"Desi Tadka serves the best Dal Makhani and Garlic Naan in the entire city! The Patiala Sweet Lassi is pure bliss."</p>
             <div class="testimonial-author">
-              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" alt="Harpreet Kaur" class="author-avatar">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" alt="Harpreet Kaur" class="author-avatar" loading="lazy">
               <div>
                 <div class="author-name">Harpreet Kaur</div>
                 <div class="author-role">Food Critic & Blogger</div>
@@ -519,7 +510,7 @@
             <div class="testimonial-stars">★★★★★</div>
             <p class="testimonial-text">"We love ordering at Table 12 via the QR code! Hot Paneer Tikka and Amritsari Chole Bhature arrived in 15 minutes. Outstanding!"</p>
             <div class="testimonial-author">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Gurdeep Singh" class="author-avatar">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Gurdeep Singh" class="author-avatar" loading="lazy">
               <div>
                 <div class="author-name">Gurdeep Singh</div>
                 <div class="author-role">Regular Guest</div>
@@ -531,7 +522,7 @@
             <div class="testimonial-stars">★★★★★</div>
             <p class="testimonial-text">"Pure veg heaven! Authentic Punjabi taste, huge portions, and lovely hospitality. Gulab Jamun with Rabri is a must try."</p>
             <div class="testimonial-author">
-              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Simran & Jasmeet" class="author-avatar">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Simran & Jasmeet" class="author-avatar" loading="lazy">
               <div>
                 <div class="author-name">Simran & Jasmeet</div>
                 <div class="author-role">Family Dining Guests</div>
@@ -560,7 +551,7 @@
       <div class="footer-grid">
         <!-- Col 1: Brand Info -->
         <div>
-          <a href="index.html" class="brand-logo" style="margin-bottom: 1.25rem; display: inline-flex; align-items: center; gap: 0.85rem; text-decoration: none;">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1.25rem; display: inline-flex; align-items: center; gap: 0.85rem;">
             <div style="width: 60px; height: 60px; border-radius: 50%; overflow: hidden; background: #ffffff; border: 2.5px solid var(--gold-accent); box-shadow: 0 4px 15px rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; padding: 3px; flex-shrink: 0;">
               <img src="images/logo.png" alt="Desi Tadka" onerror="this.src='logo.png'" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
             </div>
@@ -631,7 +622,7 @@
       <!-- Footer Bottom -->
       <div class="footer-bottom">
         <div>© 2026 Desi Tadka (Pure Veg Restaurant). All Rights Reserved.</div>
-        <div style="display: flex; gap: 1.25rem; flex-wrap: wrap;">
+        <div style="display: flex; gap: 1.25rem; flex-wrap: wrap; justify-content: center;">
           <a href="../index.html#privacy" style="color: inherit;">Privacy Policy</a>
           <a href="../index.html#refund" style="color: inherit;">Refund & Returns</a>
           <a href="../index.html#terms" style="color: inherit;">Terms & Conditions</a>
@@ -645,7 +636,7 @@
   <div class="mobile-bottom-bar">
     <div>
       <div style="font-size: 0.75rem; font-weight: 700; color: var(--primary); text-transform: uppercase;">Desi Tadka</div>
-      <div style="font-weight: 800; font-size: 0.95rem; color: var(--deep-espresso);">Quick Table & Online Order</div>
+      <div style="font-weight: 800; font-size: 0.92rem; color: var(--deep-espresso);">Quick Table & Online Order</div>
     </div>
     <a href="../index.html#order" class="btn btn-primary btn-sm">Order Now</a>
   </div>
